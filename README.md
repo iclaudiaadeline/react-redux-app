@@ -1,3 +1,4 @@
+
 # **React Guided Learning Activity: Redux State Management (Without Redux Toolkit)**
 
 **Title:** Setting Up Redux with React & TypeScript
