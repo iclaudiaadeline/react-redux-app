@@ -9,10 +9,10 @@ export const decrement = () => ({ type: DECREMENT } as const);
 
 export const reset = () => ({ type: RESET } as const);
 export const setValue = (value: number) =>
-	({ type: SET_VALUE, payload: value } as const);
+    ({ type: SET_VALUE, payload: value } as const);
 
 export type CounterAction =
-	| ReturnType<typeof increment>
-	| ReturnType<typeof decrement>
-	| ReturnType<typeof reset>
-	| ReturnType<typeof setValue>;
+    | ReturnType<typeof increment>
+    | ReturnType<typeof decrement>
+    | ReturnType<typeof reset>
+    | ReturnType<typeof setValue>;

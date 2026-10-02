@@ -7,30 +7,30 @@ import {
     type CounterAction,
 } from "../actions/counterActions";
 
- interface CounterState {
+interface CounterState {
     value: number;
 }
 
 const initialState: CounterState = {
     value: 0,
 };
- 
+
 export const counterReducer = (
     state = initialState,
     action: CounterAction | UnknownAction
 ): CounterState => {
     switch (action.type) {
         case INCREMENT:
-            return {value: state.value + 1 };
+            return { value: state.value + 1 };
         case DECREMENT:
-                return {value: state.value - 1 };
+            return { value: state.value - 1 };
         case RESET:
-                    return {value: 0 };
-         case SET_VALUE:
-      return {
-        value: typeof action.payload === "number" ? action.payload : state.value,
-      };
-          default:
-                    return state;
+            return { value: 0 };
+        case SET_VALUE:
+            return {
+                value: typeof action.payload === "number" ? action.payload : state.value,
+            };
+        default:
+            return state;
     }
 };
