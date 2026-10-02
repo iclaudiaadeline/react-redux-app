@@ -1,13 +1,13 @@
 
 import { useState } from "react";
-import { useSelector, useDispatch} from "react-redux";
-import type { RootState} from "../store/store";
+import { useSelector, useDispatch } from "react-redux";
+import type { AppDispatch, RootState } from "../store/store";
 import { increment, decrement, reset, setValue } from "../store/actions/counterActions";
 import styles from "./Counter.module.css";
 
 const Counter = () => {
     const count = useSelector((state: RootState) => state.counter.value);
-    const dispatch = useDispatch();
+    const dispatch = useDispatch<AppDispatch>();
       const [customValue, setCustomValue] = useState("0");
 
   const handleSetValue = () => {
